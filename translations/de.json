@@ -1,0 +1,572 @@
+[
+  {
+    "en": "(You)",
+    "was": "(Du)",
+    "de": "(Sie)"
+  },
+  {
+    "en": "{0, plural, one {Select a folder to move the selected document to.} other {Select a folder to move the # selected documents to.}}",
+    "was": "{0, plural, one {Wähle einen Ordner aus, in den das ausgewählte Dokument verschoben werden soll.} other {Wähle einen Ordner aus, in den die # ausgewählten Dokumente verschoben werden sollen.}}",
+    "de": "{0, plural, one {Wählen Sie einen Ordner aus, in den das ausgewählte Dokument verschoben werden soll.} other {Wählen Sie einen Ordner aus, in den die # ausgewählten Dokumente verschoben werden sollen.}}"
+  },
+  {
+    "en": "{0, plural, one {Select a folder to move the selected template to.} other {Select a folder to move the # selected templates to.}}",
+    "was": "{0, plural, one {Wähle einen Ordner aus, in den die ausgewählte Vorlage verschoben werden soll.} other {Wähle einen Ordner aus, in den die # ausgewählten Vorlagen verschoben werden sollen.}}",
+    "de": "{0, plural, one {Wählen Sie einen Ordner aus, in den die ausgewählte Vorlage verschoben werden soll.} other {Wählen Sie einen Ordner aus, in den die # ausgewählten Vorlagen verschoben werden sollen.}}"
+  },
+  {
+    "en": "{0, plural, one {Waiting on 1 recipient} other {Waiting on # recipients}}",
+    "was": "{0, plural, one {Warte auf 1 Empfänger} other {Warte auf # Empfänger}}",
+    "de": "{0, plural, one {Wartet auf 1 Empfänger} other {Wartet auf # Empfänger}}"
+  },
+  {
+    "en": "{0, plural, one {You are about to delete the selected document.} other {You are about to delete # documents.}}",
+    "was": "{0, plural, one {Du bist dabei, das ausgewählte Dokument zu löschen.} other {Du bist dabei, # Dokumente zu löschen.}}",
+    "de": "{0, plural, one {Sie sind dabei, das ausgewählte Dokument zu löschen.} other {Sie sind dabei, # Dokumente zu löschen.}}"
+  },
+  {
+    "en": "{0, plural, one {You are about to delete the selected template.} other {You are about to delete # templates.}}",
+    "was": "{0, plural, one {Du bist dabei, die ausgewählte Vorlage zu löschen.} other {Du bist dabei, # Vorlagen zu löschen.}}",
+    "de": "{0, plural, one {Sie sind dabei, die ausgewählte Vorlage zu löschen.} other {Sie sind dabei, # Vorlagen zu löschen.}}"
+  },
+  {
+    "en": "{0} invited you to {recipientActionVerb} a document",
+    "was": "{0} hat dich eingeladen, ein Dokument zu {recipientActionVerb}",
+    "de": "{0} bittet Sie, ein Dokument zu {recipientActionVerb}"
+  },
+  {
+    "en": "{inviterName} has cancelled the document {documentName}, you don't need to sign it anymore.",
+    "was": "{inviterName} hat das Dokument {documentName} storniert, du musst es nicht mehr unterzeichnen.",
+    "de": "{inviterName} hat das Dokument {documentName} storniert. Sie müssen es nicht mehr unterzeichnen."
+  },
+  {
+    "en": "{inviterName} has invited you to {0}<0/>\"{documentName}\"",
+    "was": "{inviterName} hat dich eingeladen, zu {0}<0/>\"{documentName}\"",
+    "de": "{inviterName} bittet Sie,<0/>„{documentName}“ zu {0}"
+  },
+  {
+    "en": "{inviterName} has invited you to {action} {documentName}",
+    "was": "{inviterName} hat dich eingeladen, zu {action} {documentName}",
+    "de": "{inviterName} bittet Sie, {documentName} zu {action}"
+  },
+  {
+    "en": "{inviterName} has removed you from the document {documentName}.",
+    "was": "{inviterName} hat dich aus dem Dokument {documentName} entfernt.",
+    "de": "{inviterName} hat Sie aus dem Dokument {documentName} entfernt."
+  },
+  {
+    "en": "{inviterName} has removed you from the document<0/>\"{documentName}\"",
+    "was": "{inviterName} hat dich aus dem Dokument<0/>\"{documentName}\" entfernt",
+    "de": "{inviterName} hat Sie aus dem Dokument<0/>„{documentName}“ entfernt"
+  },
+  {
+    "en": "{inviterName} on behalf of \"{teamName}\" has invited you to {0}<0/>\"{documentName}\"",
+    "was": "{inviterName} im Namen von \"{teamName}\" hat dich eingeladen, zu {0}<0/>\"{documentName}\"",
+    "de": "{inviterName} bittet Sie im Namen von „{teamName}“,<0/>„{documentName}“ zu {0}"
+  },
+  {
+    "en": "{teamName} has invited you to {0}<0/>\"{documentName}\"",
+    "was": "{teamName} hat dich eingeladen, zu {0}<0/>\"{documentName}\"",
+    "de": "{teamName} bittet Sie,<0/>„{documentName}“ zu {0}"
+  },
+  {
+    "en": "A confirmation email has been sent, and it should arrive in your inbox shortly.",
+    "was": "Eine Bestätigungs-E-Mail wurde gesendet, und sie sollte in Kürze in deinem Posteingang ankommen.", "quote_was": "standards: ignore, Documenso's own text as it is",
+    "de": "Eine Bestätigungs-E-Mail wurde gesendet und sollte in Kürze in Ihrem Posteingang ankommen."
+  },
+  {
+    "en": "A document was created by your direct template that requires you to {recipientActionVerb} it.",
+    "was": "Ein Dokument wurde von deiner direkten Vorlage erstellt, das erfordert, dass du {recipientActionVerb}.",
+    "de": "Über Ihre direkte Vorlage wurde ein Dokument erstellt, das Sie {recipientActionVerb} müssen."
+  },
+  {
+    "en": "A password reset email has been sent, if you have an account you should see it in your inbox shortly.",
+    "was": "Eine E-Mail zum Zurücksetzen des Passworts wurde gesendet, wenn du ein Konto hast, solltest du sie in Kürze in deinem Posteingang sehen.",
+    "de": "Falls zu dieser Adresse ein Konto besteht, wurde eine E-Mail zum Zurücksetzen des Passworts gesendet. Sie sollte in Kürze in Ihrem Posteingang ankommen."
+  },
+  {
+    "en": "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso.",
+    "was": "Ein Geheimnis, das an deine URL gesendet wird, damit du überprüfen kannst, dass die Anfrage von Documenso gesendet wurde.",
+    "de": "Ein Geheimnis, das an Ihre URL mitgesendet wird. Damit können Sie prüfen, dass die Anfrage von Documenso kommt."
+  },
+  {
+    "en": "A team you were a part of has been deleted",
+    "was": "Ein Team, dem du angehörtest, wurde gelöscht",
+    "de": "Ein Team, dem Sie angehörten, wurde gelöscht"
+  },
+  {
+    "en": "A unique URL to access your profile",
+    "was": "Eine eindeutige URL, um auf dein Profil zuzugreifen",
+    "de": "Eine eindeutige URL für den Zugriff auf Ihr Profil"
+  },
+  {
+    "en": "A unique URL to identify your team",
+    "was": "Eine eindeutige URL, um dein Team zu identifizieren",
+    "de": "Eine eindeutige URL, um Ihr Team zu identifizieren"
+  },
+  {
+    "en": "Accept team email request for {teamName} on Documenso",
+    "was": "Akzeptiere die Team-E-Mail-Anfrage für {teamName} bei Documenso",
+    "de": "Bitte akzeptieren Sie die Team-E-Mail-Anfrage für {teamName} bei Documenso"
+  },
+  {
+    "en": "Add recipients to your document",
+    "was": "Füge Empfänger zu deinem Dokument hinzu",
+    "de": "Fügen Sie Ihrem Dokument Empfänger hinzu"
+  },
+  {
+    "en": "Already have an account? <0>Sign in instead</0>",
+    "was": "Hast du bereits ein Konto? <0>Stattdessen anmelden</0>",
+    "de": "Haben Sie bereits ein Konto? <0>Stattdessen anmelden</0>"
+  },
+  {
+    "en": "An admin has deleted your document \"{documentName}\".",
+    "was": "Ein Administrator hat dein Dokument \"{documentName}\" gelöscht.",
+    "de": "Ein Administrator hat Ihr Dokument „{documentName}“ gelöscht."
+  },
+  {
+    "en": "An error occurred while updating your profile.",
+    "was": "Ein Fehler ist aufgetreten, während dein Profil aktualisiert wurde.",
+    "de": "Beim Aktualisieren Ihres Profils ist ein Fehler aufgetreten."
+  },
+  {
+    "en": "An error occurred while uploading your document.",
+    "was": "Ein Fehler ist aufgetreten, während dein Dokument hochgeladen wurde.",
+    "de": "Beim Hochladen Ihres Dokuments ist ein Fehler aufgetreten."
+  },
+  {
+    "en": "Are you sure you wish to delete this team?",
+    "was": "Bist du dir sicher, dass du dieses Team löschen möchtest?",
+    "de": "Möchten Sie dieses Team wirklich löschen?"
+  },
+  {
+    "en": "Are you sure?",
+    "was": "Bist du dir sicher?",
+    "de": "Sind Sie sicher?"
+  },
+  {
+    "en": "Attempts sealing the document again, useful for after a code change has occurred to resolve an erroneous document.",
+    "was": "Versuche, das Dokument erneut zu versiegeln, nützlich nach einer Codeänderung, um ein fehlerhaftes Dokument zu beheben.",
+    "de": "Versucht, das Dokument erneut zu versiegeln. Nützlich nach einer Codeänderung, um ein fehlerhaftes Dokument zu beheben."
+  },
+  {
+    "en": "Awaiting email confirmation",
+    "was": "Warte auf E-Mail-Bestätigung",
+    "de": "Wartet auf E-Mail-Bestätigung"
+  },
+  {
+    "en": "Before you get started, please confirm your email address by clicking the button below:",
+    "was": "Bitte bestätige vor dem Start deine E-Mail-Adresse, indem du auf den Button unten klickst:",
+    "de": "Bitte bestätigen Sie vor dem Start Ihre E-Mail-Adresse, indem Sie auf die Schaltfläche unten klicken:"
+  },
+  {
+    "en": "Continue by approving the document.",
+    "was": "Fahre fort, indem du das Dokument genehmigst.",
+    "de": "Fahren Sie fort, indem Sie das Dokument genehmigen."
+  },
+  {
+    "en": "Continue by downloading the document.",
+    "was": "Fahre fort, indem du das Dokument herunterlädst.",
+    "de": "Fahren Sie fort, indem Sie das Dokument herunterladen."
+  },
+  {
+    "en": "Continue by signing the document.",
+    "was": "Fahre fort, indem du das Dokument signierst.",
+    "de": "Fahren Sie fort, indem Sie das Dokument unterschreiben."
+  },
+  {
+    "en": "Continue by viewing the document.",
+    "was": "Fahre fort, indem du das Dokument ansiehst.",
+    "de": "Fahren Sie fort, indem Sie das Dokument ansehen."
+  },
+  {
+    "en": "Copy Shareable Link",
+    "was": "Kopiere den teilbaren Link",
+    "de": "Teilbaren Link kopieren"
+  },
+  {
+    "en": "Create a <0>free account</0> to access your signed documents at any time.",
+    "was": "Erstelle ein <0>kostenfreies Konto</0>, um jederzeit auf deine unterzeichneten Dokumente zuzugreifen.",
+    "de": "Erstellen Sie ein <0>kostenfreies Konto</0>, um jederzeit auf Ihre unterzeichneten Dokumente zuzugreifen."
+  },
+  {
+    "en": "Didn't request a password change? We are here to help you secure your account, just <0>contact us</0>.",
+    "was": "Du hast keine Passwortänderung angefordert? Wir helfen dir, dein Konto zu sichern, kontaktiere uns einfach <0>hier</0>.",
+    "de": "Sie haben keine Passwortänderung angefordert? Wir helfen Ihnen, Ihr Konto zu sichern. Schreiben Sie uns einfach <0>hier</0>."
+  },
+  {
+    "en": "Enable signing order",
+    "was": "Aktiviere die Signaturreihenfolge",
+    "de": "Signaturreihenfolge aktivieren"
+  },
+  {
+    "en": "Forgot your password?",
+    "was": "Hast du dein Passwort vergessen?",
+    "de": "Passwort vergessen?"
+  },
+  {
+    "en": "Here you can set branding preferences for your team.",
+    "was": "Hier kannst du die Branding-Einstellungen für dein Team festlegen.",
+    "de": "Hier legen Sie die Branding-Einstellungen für Ihr Team fest."
+  },
+  {
+    "en": "It's currently not your turn to sign. You will receive an email with instructions once it's your turn to sign the document.",
+    "was": "Es ist derzeit nicht deine Reihe zu unterschreiben. Du erhältst eine E-Mail mit Anweisungen, sobald es deine Reihe ist, das Dokument zu unterschreiben.",
+    "de": "Sie sind gerade noch nicht an der Reihe. Sobald Sie unterschreiben können, erhalten Sie eine E-Mail mit allen Anweisungen."
+  },
+  {
+    "en": "Loading document...",
+    "was": "Lade Dokument...",
+    "de": "Dokument wird geladen ..."
+  },
+  {
+    "en": "Loading suggestions...",
+    "was": "Lade Vorschläge ...",
+    "de": "Vorschläge werden geladen ..."
+  },
+  {
+    "en": "Once you update your DNS records, it may take up to 48 hours for it to be propogated. Once the DNS propagation is complete you will need to come back and press the \"Sync\" domains button.",
+    "was": "Nachdem du deine DNS-Einträge aktualisiert hast, kann es bis zu 48 Stunden dauern, bis sie verbreitet sind. Sobald die DNS-Propagation abgeschlossen ist, musst du zurückkehren und die Schaltfläche \"Domains synchronisieren\" drücken.",
+    "de": "Nachdem Sie Ihre DNS-Einträge aktualisiert haben, kann es bis zu 48 Stunden dauern, bis sie überall gelten. Kehren Sie danach hierher zurück und klicken Sie auf \"Domains synchronisieren\"."
+  },
+  {
+    "en": "Organise your documents",
+    "was": "Organisiere deine Dokumente",
+    "de": "Organisieren Sie Ihre Dokumente"
+  },
+  {
+    "en": "Organise your templates",
+    "was": "Organisiere deine Vorlagen",
+    "de": "Organisieren Sie Ihre Vorlagen"
+  },
+  {
+    "en": "Please {0} your document<0/>\"{documentName}\"",
+    "was": "Bitte {0} dein Dokument<0/>\"{documentName}\"",
+    "de": "Ihr Dokument<0/>„{documentName}“ wartet darauf, dass Sie es {0}."
+  },
+  {
+    "en": "Please {action} your document {documentName}",
+    "was": "Bitte {action} dein Dokument {documentName}",
+    "de": "Ihr Dokument {documentName} wartet darauf, dass Sie es {action}."
+  },
+  {
+    "en": "Please {recipientActionVerb} this document created by your direct template",
+    "was": "Bitte {recipientActionVerb} dieses Dokument, das von deiner direkten Vorlage erstellt wurde",
+    "de": "Ein über Ihre direkte Vorlage erstelltes Dokument wartet darauf, dass Sie es {recipientActionVerb}"
+  },
+  {
+    "en": "Please {recipientActionVerb} your document",
+    "was": "Bitte {recipientActionVerb} dein Dokument",
+    "de": "Ihr Dokument wartet darauf, dass Sie es {recipientActionVerb}"
+  },
+  {
+    "en": "Please check your email for updates.",
+    "was": "Bitte überprüfe deine E-Mail auf Updates.",
+    "de": "Bitte prüfen Sie Ihre E-Mails auf Neuigkeiten."
+  },
+  {
+    "en": "Please confirm your email",
+    "was": "Bitte bestätige deine E-Mail",
+    "de": "Bitte bestätigen Sie Ihre E-Mail-Adresse"
+  },
+  {
+    "en": "Please confirm your email address",
+    "was": "Bitte bestätige deine E-Mail-Adresse",
+    "de": "Bitte bestätigen Sie Ihre E-Mail-Adresse"
+  },
+  {
+    "en": "Please contact support at {SUPPORT_EMAIL} and we will review your account.",
+    "was": "Bitte kontaktiere den Support unter {SUPPORT_EMAIL}, und wir werden dein Konto überprüfen.", "quote_was": "standards: ignore, Documenso's own text as it is",
+    "de": "Bitte wenden Sie sich an den Support unter {SUPPORT_EMAIL}. Wir prüfen dann Ihr Konto."
+  },
+  {
+    "en": "Please enter a number",
+    "was": "Bitte gib eine Zahl ein",
+    "de": "Bitte geben Sie eine Zahl ein"
+  },
+  {
+    "en": "Please enter a value",
+    "was": "Bitte gib einen Wert ein",
+    "de": "Bitte geben Sie einen Wert ein"
+  },
+  {
+    "en": "Please enter your email address",
+    "was": "Bitte gib deine E-Mail-Adresse ein",
+    "de": "Bitte geben Sie Ihre E-Mail-Adresse ein"
+  },
+  {
+    "en": "Please enter your full name",
+    "was": "Bitte gib deinen vollständigen Namen ein",
+    "de": "Bitte geben Sie Ihren vollständigen Namen ein"
+  },
+  {
+    "en": "Reminder: {0} invited you to {recipientActionVerb} a document",
+    "was": "Erinnerung: {0} hat dich eingeladen, ein Dokument zu {recipientActionVerb}",
+    "de": "Erinnerung: {0} bittet Sie, ein Dokument zu {recipientActionVerb}"
+  },
+  {
+    "en": "Reminder: Please {0} your document<0/>\"{documentName}\"",
+    "was": "Erinnerung: Bitte {0} dein Dokument<0/>\"{documentName}\"",
+    "de": "Erinnerung: Ihr Dokument<0/>„{documentName}“ wartet darauf, dass Sie es {0}."
+  },
+  {
+    "en": "Reminder: Please {recipientActionVerb} your document",
+    "was": "Erinnerung: Bitte {recipientActionVerb} dein Dokument",
+    "de": "Erinnerung: Ihr Dokument wartet darauf, dass Sie es {recipientActionVerb}"
+  },
+  {
+    "en": "Select a field type",
+    "was": "Wähle einen Feldtyp aus",
+    "de": "Feldtyp auswählen"
+  },
+  {
+    "en": "Set your password for Documenso",
+    "was": "Lege dein Passwort für Documenso fest",
+    "de": "Legen Sie Ihr Passwort für Documenso fest"
+  },
+  {
+    "en": "Signing for",
+    "was": "Unterzeichne für",
+    "de": "Unterzeichnet für"
+  },
+  {
+    "en": "Something went wrong. Please try again.",
+    "was": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "de": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  {
+    "en": "Template has been removed from your public profile.",
+    "was": "Vorlage ist von Deinem öffentlichen Profil entfernt worden.",
+    "de": "Die Vorlage wurde aus Ihrem öffentlichen Profil entfernt."
+  },
+  {
+    "en": "That's okay, it happens! Click the button below to reset your password.",
+    "was": "Das ist in Ordnung, das passiert! Klicke auf den Button unten, um dein Passwort zurückzusetzen.",
+    "de": "Das kann passieren! Klicken Sie auf die Schaltfläche unten, um Ihr Passwort zurückzusetzen."
+  },
+  {
+    "en": "This document can not be recovered, if you would like to dispute the reason for future documents please contact support.",
+    "was": "Dieses Dokument kann nicht wiederhergestellt werden. Wenn du den Grund für zukünftige Dokumente anfechten möchtest, kontaktiere bitte den Support.",
+    "de": "Dieses Dokument kann nicht wiederhergestellt werden. Wenn Sie den Grund für künftige Dokumente anfechten möchten, wenden Sie sich bitte an den Support."
+  },
+  {
+    "en": "This document could not be downloaded at this time. Please try again.",
+    "was": "Dieses Dokument konnte derzeit nicht heruntergeladen werden. Bitte versuche es erneut.",
+    "de": "Dieses Dokument konnte gerade nicht heruntergeladen werden. Bitte versuchen Sie es erneut."
+  },
+  {
+    "en": "This document could not be duplicated at this time. Please try again.",
+    "was": "Dieses Dokument konnte derzeit nicht dupliziert werden. Bitte versuche es erneut.",
+    "de": "Dieses Dokument konnte gerade nicht dupliziert werden. Bitte versuchen Sie es erneut."
+  },
+  {
+    "en": "To add members to this team, they must first be invited to the organisation. Only organisation admins and managers can invite new members — please contact one of them to invite members on your behalf.", "quote_en": "standards: ignore, Documenso's own text as it is",
+    "was": "Um Mitglieder zu diesem Team hinzuzufügen, müssen sie zunächst in die Organisation eingeladen werden. Nur Administratoren und Manager der Organisation können neue Mitglieder einladen – bitte wende dich an eine dieser Personen, damit sie in deinem Namen Mitglieder einlädt.", "quote_was": "standards: ignore, Documenso's own text as it is",
+    "de": "Um Mitglieder zu diesem Team hinzuzufügen, müssen sie zuerst in die Organisation eingeladen werden. Das können nur Administratoren und Manager der Organisation. Bitte wenden Sie sich an eine dieser Personen."
+  },
+  {
+    "en": "To get started, please set your password by clicking the button below:",
+    "was": "Um zu beginnen, lege bitte dein Passwort fest, indem du auf den Button unten klickst:",
+    "de": "Um zu beginnen, legen Sie bitte Ihr Passwort fest, indem Sie auf die Schaltfläche unten klicken:"
+  },
+  {
+    "en": "Unable to create direct template access. Please try again later.",
+    "was": "Direkter Zugriff auf die Vorlage kann nicht erstellt werden. Bitte versuche es später noch einmal.",
+    "de": "Der direkte Zugriff auf die Vorlage kann nicht erstellt werden. Bitte versuchen Sie es später noch einmal."
+  },
+  {
+    "en": "Waiting for Your Turn",
+    "was": "Warten auf deine Reihe",
+    "de": "Sie sind noch nicht an der Reihe"
+  },
+  {
+    "en": "Want to send slick signing links like this one? <0>Check out Documenso</0>.",
+    "was": "Möchtest du schicke Signatur-Links wie diesen versenden? <0>Sieh dir Documenso an</0>.",
+    "de": "Möchten Sie selbst Signatur-Links wie diesen versenden? <0>Sehen Sie sich Documenso an</0>."
+  },
+  {
+    "en": "We couldn't remove this member. Please try again later.",
+    "was": "Dieses Mitglied konnte nicht entfernt werden. Bitte versuche es später erneut.",
+    "de": "Dieses Mitglied konnte nicht entfernt werden. Bitte versuchen Sie es später erneut."
+  },
+  {
+    "en": "We encountered an error while attempting to delete this organisation. Please try again later.",
+    "was": "Beim Versuch, diese Organisation zu löschen, ist ein Fehler aufgetreten. Bitte versuche es später noch einmal.",
+    "de": "Beim Löschen dieser Organisation ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal."
+  },
+  {
+    "en": "We encountered an error while creating the user. Please try again later.",
+    "was": "Beim Erstellen des Benutzers ist ein Fehler aufgetreten. Bitte versuche es später erneut.",
+    "de": "Beim Erstellen des Benutzers ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+  },
+  {
+    "en": "We're still waiting for other signers to sign this document.<0/>We'll notify you as soon as it's ready.",
+    "was": "Wir warten noch darauf, dass andere Unterzeichner dieses Dokument unterzeichnen.<0/>Wir benachrichtigen dich, sobald es bereit ist.",
+    "de": "Wir warten noch darauf, dass die übrigen Unterzeichner dieses Dokument unterzeichnen.<0/>Wir benachrichtigen Sie, sobald es fertig ist."
+  },
+  {
+    "en": "We've changed your password as you asked. You can now sign in with your new password.",
+    "was": "Wir haben dein Passwort wie gewünscht geändert. Du kannst dich jetzt mit deinem neuen Passwort anmelden.",
+    "de": "Wir haben Ihr Passwort wie gewünscht geändert. Sie können sich jetzt mit Ihrem neuen Passwort anmelden."
+  },
+  {
+    "en": "We've noticed API activity on your account that exceeds the fair use limits of your current plan. As a precaution, new API activity has been temporarily paused pending review.",
+    "was": "Wir haben API-Aktivitäten in deinem Konto festgestellt, die die Fair-Use-Grenzen deines aktuellen Tarifs überschreiten. Vorsorglich wurde neue API-Aktivität vorübergehend bis zur Überprüfung pausiert.",
+    "de": "Wir haben in Ihrem Konto API-Aktivitäten festgestellt, die die Fair-Use-Grenzen Ihres aktuellen Tarifs überschreiten. Vorsorglich wurde neue API-Aktivität bis zur Überprüfung pausiert."
+  },
+  {
+    "en": "We've noticed document activity on your account that exceeds the fair use limits of your current plan. As a precaution, new document activity has been temporarily paused pending review.",
+    "was": "Wir haben Dokumentenaktivitäten in deinem Konto festgestellt, die die Fair-Use-Grenzen deines aktuellen Tarifs überschreiten. Vorsorglich wurde neue Dokumentenaktivität vorübergehend bis zur Überprüfung pausiert.",
+    "de": "Wir haben in Ihrem Konto Dokumentenaktivitäten festgestellt, die die Fair-Use-Grenzen Ihres aktuellen Tarifs überschreiten. Vorsorglich wurde neue Dokumentenaktivität bis zur Überprüfung pausiert."
+  },
+  {
+    "en": "We've noticed email sending activity on your account that exceeds the fair use limits of your current plan. As a precaution, new email activity has been temporarily paused pending review.",
+    "was": "Wir haben E-Mail-Versandaktivitäten in deinem Konto festgestellt, die die Fair-Use-Grenzen deines aktuellen Tarifs überschreiten. Vorsorglich wurde neue E-Mail-Aktivität vorübergehend bis zur Überprüfung pausiert.",
+    "de": "Wir haben in Ihrem Konto E-Mail-Versandaktivitäten festgestellt, die die Fair-Use-Grenzen Ihres aktuellen Tarifs überschreiten. Vorsorglich wurde neue E-Mail-Aktivität bis zur Überprüfung pausiert."
+  },
+  {
+    "en": "Were you trying to edit this document instead?",
+    "was": "Hast du stattdessen versucht, dieses Dokument zu bearbeiten?",
+    "de": "Wollten Sie dieses Dokument stattdessen bearbeiten?"
+  },
+  {
+    "en": "You",
+    "was": "Du",
+    "de": "Sie"
+  },
+  {
+    "en": "You are about to delete <0>{organisationName}</0>. This action is not reversible. All teams will be removed and all documents will be orphaned to the deleted-account service account.",
+    "was": "Du bist dabei, <0>{organisationName}</0> zu löschen. Diese Aktion kann nicht rückgängig gemacht werden. Alle Teams werden entfernt und alle Dokumente werden dem Servicekonto des gelöschten Kontos zugeordnet.",
+    "de": "Sie sind dabei, <0>{organisationName}</0> zu löschen. Das lässt sich nicht rückgängig machen. Alle Teams werden entfernt und alle Dokumente dem Servicekonto des gelöschten Kontos zugeordnet."
+  },
+  {
+    "en": "You are about to remove the following user from the organisation <0>{organisationName}</0>:",
+    "was": "Du bist dabei, den folgenden Benutzer aus der Organisation <0>{organisationName}</0> zu entfernen:",
+    "de": "Sie sind dabei, den folgenden Benutzer aus der Organisation <0>{organisationName}</0> zu entfernen:"
+  },
+  {
+    "en": "You are currently updating <0>{memberName}</0>.",
+    "was": "Du bearbeitest aktuell <0>{memberName}</0>.",
+    "de": "Sie bearbeiten gerade <0>{memberName}</0>."
+  },
+  {
+    "en": "You are currently updating <0>{organisationMemberName}</0>.",
+    "was": "Du bearbeitest aktuell <0>{organisationMemberName}</0>.",
+    "de": "Sie bearbeiten gerade <0>{organisationMemberName}</0>."
+  },
+  {
+    "en": "You can also copy and paste this link into your browser: {confirmationLink} (link expires in 1 hour)",
+    "was": "Du kannst diesen Link auch kopieren und in deinen Browser einfügen: {confirmationLink} (Link läuft in 1 Stunde ab)",
+    "de": "Sie können diesen Link auch kopieren und in Ihren Browser einfügen: {confirmationLink} (der Link läuft in 1 Stunde ab)"
+  },
+  {
+    "en": "You can also copy and paste this link into your browser: {resetPasswordLink} (link expires in 24 hours)",
+    "was": "Du kannst diesen Link auch kopieren und in deinen Browser einfügen: {resetPasswordLink} (Link läuft in 24 Stunden ab)",
+    "de": "Sie können diesen Link auch kopieren und in Ihren Browser einfügen: {resetPasswordLink} (der Link läuft in 24 Stunden ab)"
+  },
+  {
+    "en": "You can manage your email preferences here.",
+    "was": "Du kannst deine E-Mail-Einstellungen hier verwalten.",
+    "de": "Ihre E-Mail-Einstellungen können Sie hier verwalten."
+  },
+  {
+    "en": "You cannot delete this item because the document has been sent to recipients.",
+    "was": "Du kannst dieses Element nicht löschen, weil das Dokument bereits an Empfänger gesendet wurde.",
+    "de": "Sie können dieses Element nicht löschen, weil das Dokument bereits an die Empfänger gesendet wurde."
+  },
+  {
+    "en": "You don't need to sign it anymore.",
+    "was": "Du musst es nicht mehr unterschreiben.",
+    "de": "Sie müssen es nicht mehr unterschreiben."
+  },
+  {
+    "en": "You have been invited to join {0} on Documenso",
+    "was": "Du wurdest eingeladen, {0} auf Documenso beizutreten",
+    "de": "Sie wurden eingeladen, {0} auf Documenso beizutreten"
+  },
+  {
+    "en": "You have been removed from a document",
+    "was": "Du wurdest von einem Dokument entfernt",
+    "de": "Sie wurden aus einem Dokument entfernt"
+  },
+  {
+    "en": "You have initiated the document {0} that requires you to {recipientActionVerb} it.",
+    "was": "Du hast das Dokument {0} initiiert, das erfordert, dass du {recipientActionVerb}.",
+    "de": "Sie haben das Dokument {0} angestoßen, das Sie {recipientActionVerb} müssen."
+  },
+  {
+    "en": "You have signed “{documentName}”",
+    "was": "Du hast „{documentName}“ unterzeichnet",
+    "de": "Sie haben „{documentName}“ unterzeichnet"
+  },
+  {
+    "en": "Your document has been deleted by an admin!",
+    "was": "Dein Dokument wurde von einem Administrator gelöscht!",
+    "de": "Ihr Dokument wurde von einem Administrator gelöscht!"
+  },
+  {
+    "en": "Your document has been successfully renamed.",
+    "was": "Dein Dokument wurde erfolgreich umbenannt.",
+    "de": "Ihr Dokument wurde erfolgreich umbenannt."
+  },
+  {
+    "en": "Your organisation has been deleted",
+    "was": "Deine Organisation wurde gelöscht",
+    "de": "Ihre Organisation wurde gelöscht"
+  },
+  {
+    "en": "Your organisation is generating API requests faster than normal, so some requests are being temporarily throttled.",
+    "was": "Deine Organisation erzeugt API-Anfragen schneller als gewöhnlich, daher werden einige Anfragen vorübergehend gedrosselt.",
+    "de": "Ihre Organisation erzeugt API-Anfragen schneller als gewöhnlich, daher werden einige Anfragen vorübergehend gedrosselt."
+  },
+  {
+    "en": "Your organisation is generating documents faster than normal, so some requests are being temporarily throttled.",
+    "was": "Deine Organisation erzeugt Dokumente schneller als gewöhnlich, daher werden einige Anfragen vorübergehend gedrosselt.",
+    "de": "Ihre Organisation erzeugt Dokumente schneller als gewöhnlich, daher werden einige Anfragen vorübergehend gedrosselt."
+  },
+  {
+    "en": "Your organisation is generating emails faster than normal, so some requests are being temporarily throttled.",
+    "was": "Deine Organisation erzeugt E-Mails schneller als gewöhnlich, daher werden einige Anfragen vorübergehend gedrosselt.",
+    "de": "Ihre Organisation erzeugt E-Mails schneller als gewöhnlich, daher werden einige Anfragen vorübergehend gedrosselt."
+  },
+  {
+    "en": "Your password has been updated.",
+    "was": "Dein Passwort wurde aktualisiert.",
+    "de": "Ihr Passwort wurde aktualisiert."
+  },
+  {
+    "en": "Your template has been successfully renamed.",
+    "was": "Deine Vorlage wurde erfolgreich umbenannt.",
+    "de": "Ihre Vorlage wurde erfolgreich umbenannt."
+  },
+  {
+    "en": "Waiting for others to complete signing",
+    "was": "",
+    "de": "Warten auf die übrigen Unterschriften"
+  },
+  {
+    "en": "Document already signed",
+    "was": "",
+    "de": "Dokument bereits unterschrieben"
+  },
+  {
+    "en": "This document was already signed and no further action was taken.",
+    "was": "",
+    "de": "Dieses Dokument war bereits unterschrieben. Es wurde nichts weiter unternommen."
+  },
+  {
+    "en": "Document already completed",
+    "was": "",
+    "de": "Dokument bereits abgeschlossen"
+  },
+  {
+    "en": "Redirecting to {0}...",
+    "was": "",
+    "de": "Weiterleitung zu {0} ..."
+  },
+  {
+    "en": "Allow all organisation members to access this team",
+    "was": "Erlaube allen Organisationsmitgliedern den Zugriff auf dieses Team",
+    "de": "Allen Organisationsmitgliedern den Zugriff auf dieses Team erlauben"
+  }
+]

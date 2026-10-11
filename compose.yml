@@ -1,0 +1,81 @@
+# Documenso built from this repository, for looking at the texts on a laptop.
+# Local only; production and the preview run from terraform/stacks/documenso.yml.
+#
+#   docker compose up --build
+#
+#   http://localhost:3005   Documenso; an account is made under "Sign up"
+#   http://localhost:8025   Mailpit, every mail Documenso sends
+#
+# Ports in use elsewhere can be moved: DOCUMENSO_PORT, MAILPIT_PORT.
+#
+# Every secret below is a local test value and nothing else. The signing
+# certificate is made on the first start, self-signed, into the volume.
+
+services:
+  documenso:
+    build: .
+    ports:
+      - "${DOCUMENSO_PORT:-3005}:3000"
+    environment:
+      PORT: "3000"
+      NEXTAUTH_SECRET: local-nextauth-secret-not-a-real-one
+      NEXT_PRIVATE_ENCRYPTION_KEY: local-encryption-key-not-a-real-one-0123
+      NEXT_PRIVATE_ENCRYPTION_SECONDARY_KEY: local-encryption-key2-not-a-real-one-01
+      NEXT_PUBLIC_WEBAPP_URL: http://localhost:${DOCUMENSO_PORT:-3005}
+      NEXT_PRIVATE_INTERNAL_WEBAPP_URL: http://localhost:3000
+      NEXT_PRIVATE_DATABASE_URL: postgres://documenso:documenso@db:5432/documenso
+      NEXT_PRIVATE_DIRECT_DATABASE_URL: postgres://documenso:documenso@db:5432/documenso
+      NEXT_PUBLIC_UPLOAD_TRANSPORT: database
+      NEXT_PRIVATE_SMTP_TRANSPORT: smtp-auth
+      NEXT_PRIVATE_SMTP_HOST: mailpit
+      NEXT_PRIVATE_SMTP_PORT: "1025"
+      NEXT_PRIVATE_SMTP_UNSAFE_IGNORE_TLS: "true"
+      NEXT_PRIVATE_SMTP_FROM_NAME: MerkurOffice
+      NEXT_PRIVATE_SMTP_FROM_ADDRESS: membership@merkuroffice.de
+      NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH: /certificate/cert.p12
+      NEXT_PRIVATE_SIGNING_PASSPHRASE: local
+      DOCUMENSO_DISABLE_TELEMETRY: "true"
+    volumes:
+      - certificate:/certificate:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      certificate:
+        condition: service_completed_successfully
+
+  db:
+    image: postgres:15.19@sha256:c961aa287d8698297cb26cdfadfbe9fd2cbaf77e53cfffe9636e8d8a1e4d842c
+    environment:
+      POSTGRES_USER: documenso
+      POSTGRES_PASSWORD: documenso
+      POSTGRES_DB: documenso
+    volumes:
+      - db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U documenso -d documenso"]
+      interval: 3s
+      retries: 30
+
+  # A self-signed certificate for the finished PDFs, made once.
+  certificate:
+    image: alpine:3.22@sha256:5291449c3df73caf6ed85e649dec1b9e818b39a5d8c871e97afc13e9cd5e8fa8
+    command:
+      - sh
+      - -c
+      - |
+        test -f /certificate/cert.p12 && exit 0
+        apk add --no-cache openssl >/dev/null
+        cd /tmp && openssl req -x509 -newkey rsa:2048 -nodes -days 365 -subj "/CN=Documenso lokal" -keyout k.pem -out c.pem 2>/dev/null
+        openssl pkcs12 -export -inkey k.pem -in c.pem -out /certificate/cert.p12 -passout pass:local
+        chmod 644 /certificate/cert.p12
+    volumes:
+      - certificate:/certificate
+
+  mailpit:
+    image: axllent/mailpit:v1.27.3
+    ports:
+      - "${MAILPIT_PORT:-8025}:8025"
+
+volumes:
+  db:
+  certificate:

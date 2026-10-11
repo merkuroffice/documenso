@@ -1,0 +1,91 @@
+# Builds Documenso with our German texts and pushes it to ECR.
+#
+# Repository variables, none of it secret:
+#   AWS_ROLE_ARN     arn:aws:iam::008497458832:role/merkuroffice-github-actions-documenso
+#   AWS_REGION       eu-central-1
+#   ECR_REPOSITORY   merkuroffice/documenso
+#
+# The tag is the Documenso release plus our own revision, for example
+# 2.20.0.1. The first three parts say which Documenso is inside, the fourth
+# which state of this repository built it. Both are read from files rather than
+# typed here: the release from the Dockerfile, the revision from texts.version.
+#
+# Raising texts.version is part of a change. A build whose tag already exists in
+# ECR stops instead of overwriting it, so a version tag always means one image.
+
+name: Build and push
+
+on:
+  push:
+    branches: [main]
+    # A change to the checks or the documentation is no new image: the build
+    # would stop anyway, because texts.version was not raised.
+    paths-ignore:
+      - ".github/scripts/**"
+      - ".github/workflows/standards.yml"
+      - "**/*.md"
+      - "compose.yml"
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: build-documenso
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: version
+        run: |
+          DS=$(grep -m1 '^ARG DOCUMENSO_VERSION=' Dockerfile | cut -d= -f2 | sed 's/^v//')
+          TEXTS=$(tr -d '[:space:]' < texts.version)
+          echo "documenso=$DS"  >> "$GITHUB_OUTPUT"
+          echo "texts=$TEXTS"   >> "$GITHUB_OUTPUT"
+          echo "tag=$DS.$TEXTS" >> "$GITHUB_OUTPUT"
+          echo "Building Documenso $DS, texts revision $TEXTS, tag $DS.$TEXTS"
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # Free only on the one answer that says so. Any other error, a missing
+      # permission above all, stops the build: reading it as "no such tag" is how
+      # Keycloak 26.4.7.11 was pushed twice on 07.10.2026.
+      - name: Refuse to overwrite an existing tag
+        run: |
+          if out=$(aws ecr describe-images --repository-name "${{ vars.ECR_REPOSITORY }}" \
+                     --image-ids imageTag=${{ steps.version.outputs.tag }} 2>&1); then
+            echo "::error::Tag ${{ steps.version.outputs.tag }} exists already. Raise texts.version."
+            exit 1
+          fi
+          if ! grep -q ImageNotFoundException <<<"$out"; then
+            echo "::error::Could not check whether the tag exists: $out"
+            exit 1
+          fi
+
+      - uses: docker/setup-buildx-action@v3
+
+      # The texts are written while the image is built, see
+      # scripts/apply-translations.mjs: a text Documenso has changed since stops
+      # this step, before anything is pushed.
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          tags: |
+            ${{ steps.ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:${{ steps.version.outputs.tag }}
+            ${{ steps.ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

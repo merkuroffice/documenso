@@ -1,0 +1,41 @@
+# The house rules, checked on every pull request and every push to the default
+# branch: no em or en dash, no comma before "und", real umlauts, no AI
+# attribution in commits or pull requests. Only what a change adds is checked.
+# The script is the same in every repository of merkuroffice, see
+# .github/scripts/check-standards.py; run it locally with
+#   BASE=origin/main HEAD=HEAD python3 .github/scripts/check-standards.py
+name: Standards
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  texts:
+    name: Texts and commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check what this change adds
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: python3 .github/scripts/check-standards.py
+
+  texts:
+    name: Texts apply
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The whole image without pushing: it writes the texts into Documenso's
+      # catalogs and stops on any that no longer match, so a pull request finds
+      # out before main does.
+      - run: docker build .

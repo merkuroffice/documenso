@@ -30,8 +30,8 @@ jobs:
           PR_BODY: ${{ github.event.pull_request.body }}
         run: python3 .github/scripts/check-standards.py
 
-  texts:
-    name: Texts apply
+  image:
+    name: Image build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
